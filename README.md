@@ -3,7 +3,7 @@
 **BookShelf** is a simple Android app that allows users to search for books using the Google Books API.
 
 ### Features:
-- **Search Page**: On launch, the app presents a search page where users can enter book names to search.  
+- **Search Page**: On launch, the app presents a search page where users can enter keyword to search.  
   <img src="https://github.com/user-attachments/assets/e50aff43-195e-48e2-ae8a-1d90de51ac73" width="400" />
 
 - **Book Thumbnails**: After searching, book thumbnails are displayed based on the query.  
