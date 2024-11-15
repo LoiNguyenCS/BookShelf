@@ -4,10 +4,10 @@
 
 ### Features:
 - **Search Page**: On launch, the app presents a search page where users can enter book names to search.  
-  ![Search Page](https://github.com/user-attachments/assets/e50aff43-195e-48e2-ae8a-1d90de51ac73)
+  <img src="https://github.com/user-attachments/assets/e50aff43-195e-48e2-ae8a-1d90de51ac73" width="400" />
 
 - **Book Thumbnails**: After searching, book thumbnails are displayed based on the query.  
-  ![Book Thumbnail](https://github.com/user-attachments/assets/a1560b7c-d43a-4096-99c0-aa275e5ba7e2)
+  <img src="https://github.com/user-attachments/assets/a1560b7c-d43a-4096-99c0-aa275e5ba7e2" width="400" />
 
 ### Current Limitations:
 - **Book Details**: Currently, the app only displays book images. Future updates may include additional details like authors, prices, descriptions, etc.
