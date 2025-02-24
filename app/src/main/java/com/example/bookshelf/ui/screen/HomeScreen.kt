@@ -41,8 +41,10 @@ import coil.request.ImageRequest
 import com.example.bookshelf.R
 import com.example.bookshelf.ui.BookShelfViewModel
 import com.example.bookshelf.ui.BookUIState
+import com.github.loinguyencs.safeinternetaccesschecker.effect.HasRiskyInternetConnection
 
 @Composable
+@HasRiskyInternetConnection
 fun HomeScreen(viewModel: BookShelfViewModel, modifier: Modifier = Modifier) {
 
     val currentUIState by remember { derivedStateOf { viewModel.bookUiState}}
@@ -60,6 +62,7 @@ fun HomeScreen(viewModel: BookShelfViewModel, modifier: Modifier = Modifier) {
 }
 
 @Composable
+@HasRiskyInternetConnection
 fun StartScreen(viewModel: BookShelfViewModel) {
     var searchQuery by remember { mutableStateOf("") }
 

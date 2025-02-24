@@ -8,6 +8,10 @@ pluginManagement {
             }
         }
         mavenCentral()
+        // Public GitHub Packages repository (No authentication required)
+        maven {
+            url = uri("https://maven.pkg.github.com/LoiNguyenCS/SafeInternetAccessChecker")
+        }
         gradlePluginPortal()
     }
 }
@@ -16,6 +20,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven("https://jitpack.io") // Add JitPack repository
+
     }
 }
 

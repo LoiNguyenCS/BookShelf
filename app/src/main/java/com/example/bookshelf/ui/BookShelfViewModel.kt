@@ -14,6 +14,8 @@
     import com.example.bookshelf.BookShelfApplication
     import com.example.bookshelf.data.BookShelfRepository
     import com.example.bookshelf.data.NetworkRepository
+    import com.github.loinguyencs.safeinternetaccesschecker.effect.HasRiskyInternetConnection
+    import com.github.loinguyencs.safeinternetaccesschecker.effect.InternetSafeCheck
     import kotlinx.coroutines.Job
     import kotlinx.coroutines.launch
     import java.io.IOException
@@ -32,25 +34,21 @@
             private set
 
 
+        @HasRiskyInternetConnection
         fun updateSearchTerm(searchedTerm: String) {
             updateUIWithSearchResult(searchedTerm)
         }
 
+        @HasRiskyInternetConnection
         fun updateUIWithSearchResult(searchedTerm: String) {
             viewModelScope.launch {
-                    bookUiState = try {
-                        val searchResult = repository.getBookData(searchedTerm)
+                val searchResult = repository.getBookData(searchedTerm)
                             .items
                             .map { it.volumeInfo }
                             .mapNotNull { it.imageLinks }
                             .mapNotNull { it.thumbnail }
-                        BookUIState.ShowingResult(searchResult)
-                    } catch (e: IOException) {
-                        BookUIState.Error
-                    }
-                    catch (e: HttpException) {
-                        BookUIState.Error
-                    }
+                       bookUiState = BookUIState.ShowingResult(searchResult)
+
             }
         }
 
