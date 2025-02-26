@@ -55,8 +55,8 @@ android {
 
 
     dependencies {
-        detektPlugins("com.github.LoiNguyenCS:SafeInternetAccessChecker:v1.2.2") // Replace with your actual version
-        compileOnly("com.github.LoiNguyenCS:SafeInternetAccessChecker:v1.2.2")
+        detektPlugins("com.github.LoiNguyenCS:SafeInternetAccessChecker:v1.2.3") // Replace with your actual version
+        compileOnly("com.github.LoiNguyenCS:SafeInternetAccessChecker:v1.2.3")
         implementation(libs.androidx.core.ktx)
         implementation(libs.androidx.lifecycle.runtime.ktx)
         implementation(libs.androidx.activity.compose)

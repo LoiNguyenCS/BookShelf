@@ -10,15 +10,10 @@
     import androidx.lifecycle.viewModelScope
     import androidx.lifecycle.viewmodel.initializer
     import androidx.lifecycle.viewmodel.viewModelFactory
-    import coil.network.HttpException
     import com.example.bookshelf.BookShelfApplication
     import com.example.bookshelf.data.BookShelfRepository
-    import com.example.bookshelf.data.NetworkRepository
     import com.github.loinguyencs.safeinternetaccesschecker.effect.HasRiskyInternetConnection
-    import com.github.loinguyencs.safeinternetaccesschecker.effect.InternetSafeCheck
-    import kotlinx.coroutines.Job
     import kotlinx.coroutines.launch
-    import java.io.IOException
 
     sealed interface BookUIState {
         object Searching: BookUIState
@@ -34,7 +29,7 @@
             private set
 
 
-        @HasRiskyInternetConnection
+        // @HasRiskyInternetConnection
         fun updateSearchTerm(searchedTerm: String) {
             updateUIWithSearchResult(searchedTerm)
         }
