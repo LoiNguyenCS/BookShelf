@@ -1,39 +1,39 @@
-build:
-  maxIssues: 0
-  excludeCorrectable: false
+  build:
+    maxIssues: 0
+    excludeCorrectable: false
 
-config:
-  validation: true
-  warningsAsErrors: true
-  excludes: ''
+  config:
+    validation: true
+    warningsAsErrors: true
+    excludes: ''
 
-processors:
-  active: false  # Disable all built-in processors
+  processors:
+    active: false  # Disable all built-in processors
 
-SafeInternetAccessRule:
-  ConnectToInternetEffectRule:
-    active: true
+  SafeInternetAccessRule:
+    ConnectToInternetEffectRule:
+      active: true
 
-console-reports:
-  active: true  # Disable built-in reports
+  console-reports:
+    active: true  # Disable built-in reports
 
-output-reports:
-  active: true  # Disable output reports
+  output-reports:
+    active: true  # Disable output reports
 
-comments:
-  active: false  # Disable comment-related checks
+  comments:
+    active: false  # Disable comment-related checks
 
-complexity:
-  active: false  # Disable all complexity-related checks
+  complexity:
+    active: false  # Disable all complexity-related checks
 
-naming:
-  active: false  # Disable all naming-related checks
+  naming:
+    active: false  # Disable all naming-related checks
 
-performance:
-  active: false  # Disable all performance-related checks
+  performance:
+    active: false  # Disable all performance-related checks
 
-potential-bugs:
-  active: false  # Disable all potential bugs checks
+  potential-bugs:
+    active: false  # Disable all potential bugs checks
 
-style:
-  active: false  # Disable all style checks
+  style:
+    active: false  # Disable all style checks
